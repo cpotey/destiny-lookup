@@ -1,0 +1,438 @@
+
+@font-face {
+    font-family: 'Neue Haas Grotesk W01 Disp';
+    src: url('../fonts/NeueHaasGroteskDispW01-65Md.woff2') format('woff2'),
+        url('../fonts/NeueHaasGroteskDispW01-65Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('../fonts/NHaasGroteskDSW01-55Rg.woff2') format('woff2'),
+        url('../fonts/NHaasGroteskDSW01-55Rg.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+	
+	background: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size:cover;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column; 
+}
+
+#background {
+	min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+
+.active-search #guardian-search {
+	position: absolute;
+	top: 8vh;
+}
+
+#search-form {
+    border: 1px solid #fff;
+    padding: 0.5rem 2rem;
+}
+
+#search-form input {
+	height: 80px;
+    font-size: 2rem;
+    font-family: "Neue Haas Grotesk W01 Disp", "Helvetica Neue", "Arial", sans-serif;
+    /*font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;*/
+    background-color: transparent;
+    border: none;
+    color:#fff;
+}
+
+#search-form input:focus {
+	outline:none;
+}
+
+#search-form #submit {
+    color: #fff;
+}
+#search-form #submit [STROKE*='#'], #search-form #submit [stroke*='#'] {
+    stroke: currentcolor;
+}
+
+#submit:hover {
+	cursor: pointer;
+}
+#search-form svg {
+	transition:.3s ease;
+}
+
+#search-form #submit:hover svg {
+transform: scale(1.2);
+transform-origin: center;
+}
+
+#console-select:hover {
+	cursor: pointer;
+}
+#console-select img {
+	display:block;
+	max-width: 100px;
+	max-height: 75px;
+	float: left;
+	padding: 1rem;
+	margin: 0 0.5rem;
+	transition:.4s;
+	min-width: 45px;
+
+}
+#console-select:hover img {
+	/*transform: translate(0, -7px);*/
+	transform: scale(1.2);
+transform-origin: center;
+}
+
+#consoles {
+	flex-direction: row;
+display: flex;
+}
+
+
+.flex-grid {
+	display: flex;
+	justify-content: space-around;
+}
+.flex-grid #destiny-user {
+	flex-direction: column;
+	display: flex;
+	margin: 0 1rem;
+	position:relative;
+	max-width: 400px;
+	font-family: "Neue Haas Grotesk W01 Disp", "Helvetica Neue", "Arial", sans-serif;
+	
+}
+
+#destiny-user .emblem {
+	max-width: 400px;
+}
+#data-div {
+	color: #f8ffff;
+	margin: 10px;
+	font-size: 19px;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Arial", sans-serif;
+}
+
+#search-intro {
+	color: #f8ffff;
+	/*margin: 10px;*/
+	margin: 0px 0px 10px;
+	font-size: 19px;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Arial", sans-serif;
+}
+
+.light:before {
+	content: "\2726";
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 10px;
+	margin-right: 4px;
+}
+
+.light {
+	position: absolute;
+	right: 15px;
+	z-index: 10;
+	color: #e9b737;
+	margin: auto;
+	font-size: 29px;
+	top: 24px;
+	font-family: "Neue Haas Grotesk W01 Disp", "Helvetica Neue", "Arial", sans-serif;
+}
+
+.race-class {
+	position: absolute;
+	top: 17px;
+	bottom: 0;
+	font-family: "Neue Haas Grotesk W01 Disp", "Helvetica Neue", "Arial", sans-serif;
+	/* transform: translateY(-50%); */
+	left: 105px;
+	color:#f8ffff;
+}
+.race, .class {
+	margin: 0;
+}
+.race {
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Arial", sans-serif;
+	letter-spacing: 1px;
+	color: rgba(255, 255, 255, 0.75);
+}
+.class {
+	font-size: 24px;
+}
+.minutes {
+	color: #f8ffff;
+	margin: 10px 0;
+	font-size: 19px;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Arial", sans-serif;
+	text-align: center;
+}
+.level {
+	margin: 0;
+}
+
+
+
+
+
+#progress {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+  transform: translateZ(0);
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+  transform: translateZ(0);
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+
+
+#background:before {
+content: "";
+display: block;
+position: fixed;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: -1;
+background: url("../img/destinycirclesmaller.png") no-repeat fixed center center;
+/*animation: spin 360s linear infinite;
+-webkit-animation: spin 360s linear infinite;
+-moz-animation: spin 360s linear infinite;*/
+
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg)
+    }
+}
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+
+
+#thought {
+	text-align: center;
+	position: absolute;
+	bottom: 15vh;
+	left: 0;
+	right: 0;
+}
+
+#thought .head {
+	font-size: 19px;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Arial", sans-serif;
+	margin:0;
+}
+#thought .generated {
+	font-size: 24px;
+	font-family: "Neue Haas Grotesk W01 Disp", "Helvetica Neue", "Arial", sans-serif;
+	margin: 10px 0 0;
+}
+#thought .head, #thought .generated {
+	display:none;
+}
+#total-time {
+	color: #f8ffff;
+	margin: auto;
+	font-size: 27px;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Arial", sans-serif;
+}
+#total-time span {
+	color: #e9b737;
+	font-family: "Neue Haas Grotesk W01 Disp", "Helvetica Neue", "Arial", sans-serif;
+}
+
+
+
+@media screen and (min-width:1261px) and (max-width:1300px) {
+	.flex-grid #destiny-user {
+		margin: 0 0.5rem;
+	}
+}
+@media screen and (max-width:1260px) {
+
+	#background {
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+	.flex-grid {
+    display: block;
+    justify-content: initial;
+    margin-top: 2rem;
+}
+	#guardian-search {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 5vh;
+}
+	.active-search #guardian-search {
+    position: relative;
+    top: 0vh;
+    padding-top: 5vh;
+}
+	#data-div {
+		margin: 0px;
+    padding: 10px 0;
+	}
+	#console-select img {
+    width: 75px;
+    height: 75px;
+}
+	#consoles {
+	align-items: center;
+    justify-content: center;
+    flex-direction: row;
+	}
+	#progress {
+		margin: 0 auto;
+		margin-top:1rem;
+	}
+	.flex-grid #destiny-user {
+    margin-bottom: 1.2rem;
+        display: block;
+            margin: 0 auto;
+}
+#thought {
+    position: relative;
+    bottom: 0;
+    padding-top: 2rem;
+}
+/*#search-form {
+    width: max-content;
+}*/
+
+	#guardian-search {
+    display: flex;
+
+}
+	#background {
+    display: block;
+    align-items: initial;
+    justify-content: initial;
+    flex-direction: initial;
+    width: 100%;
+}
+
+}
+@media screen and (max-width:500px) {
+
+#guardian-search {
+    position: relative;
+    top: 0vh;
+    padding-top: 5vh;
+    width: 90%;
+    margin: 0 auto;
+    margin: 0 auto;
+    display: flex;
+}
+#search-form {
+    width: 100%;
+    padding: 0 0%;
+}
+#search-form input {
+    width: 78%;
+    padding: 0 5%;
+}
+#destiny-user .emblem {
+    max-width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+.light {
+	top: 20%;
+	    right: 8%;
+}
+.race-class {
+	top: 10%;
+}
+#thought {
+	padding: 2rem 5% 0;
+	    margin-bottom: 2rem;
+}
+
+#background {
+    display: flex; 
+        align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+}
+
+
+
+
+
+
+
+
