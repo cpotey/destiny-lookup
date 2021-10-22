@@ -1,8 +1,7 @@
-    
   var searchForm = document.getElementById("search-form");
   var searchInput = document.getElementById("user-lookup");
 
-  var BungieApiKey = "0a6526b7396a443abfd1a147187ad778";
+  var BungieApiKey = process.env.API_KEY;
   
 
   // On click of submit button, do an API Request
@@ -69,7 +68,7 @@ var totalmins = [];
 
         // Store the user lookup response in data and log to console. Create an output variable to store data in.
         var data = JSON.parse(userSearch.responseText);
-        //console.log(data);    
+        console.log(data);    
 
         var userResponse = data.Response;
 
